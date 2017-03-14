@@ -19,16 +19,18 @@ public class Atvaizdavimas {
             //Statement statementnt = connection.createStatement();
         } catch (Exception klaida) {
             System.out.println(klaida);
+
         }
+
     }
 
     public void pasisveikinimas() {
-        System.out.println("Sveiki, įveskite skaičių norimos lentelės pasirinkimui:");
+        System.out.println("Sveiki, iveskite skaiciu norimos lenteles pasirinkimui:");
 
     }
 
     public void pakalausti() {
-        System.out.println("'1' - Studentai   '2' - Adresai    '3' - Pažymiai ");
+        System.out.println("'1' - Studentai   '2' - Adresai    '3' - Pazymiai ");
     }
 
     public void sprendimas() {
@@ -45,7 +47,7 @@ public class Atvaizdavimas {
                 lentele_3();
                 break;
             default:
-                System.out.println("Ivedėte blogą skaičių, tokios lentelės nėra");
+                System.out.println("Ivedete bloga skaiciu, tokios lenteles nera");
 
         }
     }
@@ -60,9 +62,9 @@ public class Atvaizdavimas {
                 System.out.print(resultSet.getString("name"));
                 System.out.print("|");
                 System.out.print(resultSet.getString("surname"));
-                System.out.print("");
+                System.out.print("|");
                 System.out.print(resultSet.getInt("phone"));
-                System.out.print("");
+                System.out.print("|");
                 System.out.print(resultSet.getString("email"));
                 System.out.println("");
 
@@ -115,4 +117,5 @@ public class Atvaizdavimas {
         }
 
     }
+
 }
